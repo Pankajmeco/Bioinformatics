@@ -1,0 +1,54 @@
+#Installing R Studio in ubuntu. Ubuntu works faster with RStudio and requires comparatively limited computational power. 
+
+Step 1: Open terminal (Ctrl+Alt+T) in Ubuntu
+Step 2: Update the package’s cache. using the following code in the terminal (-s) is being used to bypass the requirement of access to root if you are using virtualmachine like me
+
+sudo -s apt-get update
+
+Step 3: Install R environment
+
+sudo -s apt -y install r-base
+
+Check for the version of R package using
+
+R --version
+
+Step 4: Check R installation by using the following command.
+
+user@Ubuntu:~$ R 
+
+(Need to have R version post 3.6+ for proper functions and packages)
+
+
+
+
+##Install Rstudio on Ubuntu  : We use .deb type of installer which is like .exe file but for linux but you cannot simply download and install it 
+
+Step 5: Install gdebi package to install .deb packages easily.
+
+sudo -s add-apt-repository universe
+
+sudo -s apt-get install gdebi-core
+
+Step 6: Go to R Studio downloads and select the latest *.deb package available under Ubuntu 18/Debian 10.
+
+Step 7: Navigate to the Downloads folder in the local machine.
+
+in terminal type the following
+
+$ cd Downloads/
+$ ls
+
+you should find something like this "rstudio-1.2.5042-amd64.deb"
+
+Step 8: Install using gdebi package.
+
+sudo gdebi rstudio-1.2.5042-amd64.deb
+
+Step 9: Run the RStudio using Terminal
+
+user@Ubuntu:~/Downloads/ $ rstudio 
+
+If R Studio opens properly , well done!! pat yourself!!
+
+Now you can use RStudio in Ubuntu which will be atleast three times faster than RStudio in windows
